@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+@theme {
+  /* Identidad ATTOS */
+  --color-bordo: #631636;
+  --color-bordo-dark: #4a0f28;
+  --color-bordo-mid: #8a3157;
+  --color-bordo-soft: #f3e4ea;
+  --color-beige: #f4ede3;
+  --color-beige-deep: #e9dfd0;
+  --color-surface: #fffdf9;
+  --color-ink: #2b1a22;
+  --color-muted: #7d6c73;
+  --color-line: #e7dccd;
+
+  /* Personas */
+  --color-felipe: #631636;
+  --color-bauti: #d9694a;
+  --color-cami: #6d5bb5;
+
+  /* Estados de tareas */
+  --color-st-todo: #6f6470;
+  --color-st-doing: #3f6fb0;
+  --color-st-review: #b98416;
+  --color-st-done: #3f8f5f;
+
+  /* Prioridades */
+  --color-prio-low: #6f6470;
+  --color-prio-mid: #3f6fb0;
+  --color-prio-high: #d9822b;
+  --color-prio-urgent: #c0322f;
+
+  /* Categorías del calendario */
+  --color-cat-comercial: #631636;
+  --color-cat-marketing: #d9694a;
+  --color-cat-sistemas: #6d5bb5;
+  --color-cat-operaciones: #2f7d8a;
+  --color-cat-reuniones: #a8842f;
+
+  --shadow-card:
+    0 1px 2px rgb(99 22 54 / 0.04), 0 10px 28px -14px rgb(99 22 54 / 0.16);
+  --shadow-float:
+    0 2px 4px rgb(99 22 54 / 0.06), 0 18px 40px -12px rgb(99 22 54 / 0.28);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-beige);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-bordo);
+  color: var(--color-beige);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
